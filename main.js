@@ -66,6 +66,8 @@ document.querySelector('.right-info').addEventListener('mouseout', () => {
 
 let swiper = new Swiper(".mySwiper", {
   direction: "vertical",
+  effect: 'fade',
+  speed: 1000,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
