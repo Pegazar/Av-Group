@@ -1,0 +1,1129 @@
+@import url("https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Taviraj", serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+
+    nav {
+      padding: 36px 50px;
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .logo {
+          padding-right: 50px;
+
+          a {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .list {
+          display: flex;
+          justify-content: center;
+          gap: 36px;
+
+          li {
+            list-style: none;
+            position: relative;
+
+            a {
+              text-transform: uppercase;
+              color: #4e4e4e;
+              font-size: 13px;
+              font-weight: 500;
+              text-decoration: none;
+
+              &:hover {
+                color: #146c94;
+              }
+
+              &:hover:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 24px;
+                height: 2px;
+                border-radius: 2px;
+                background: #146c94;
+                color: #146c94;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+
+        .search {
+          padding-right: 24.5px;
+          display: flex;
+          align-items: center;
+
+          input {
+            visibility: hidden;
+            opacity: 0;
+            outline: none;
+            border: none;
+            z-index: 999;
+
+            &::placeholder {
+              color: #bcbcbc;
+            }
+          }
+
+          input.active {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 26px 50px;
+            visibility: visible;
+            opacity: 1;
+            background: #fff;
+            color: #bcbcbc;
+            font-size: 20px;
+            font-weight: 400;
+          }
+
+          #search-btn {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+          }
+
+          #close-btn {
+            display: none;
+
+            &.active {
+              display: block;
+              position: absolute;
+              top: 43px;
+              right: 50px;
+              transform: translateY(-50%);
+              z-index: 999;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+
+        .line {
+          display: flex;
+        }
+
+        .lang {
+          padding-left: 24.5px;
+
+          button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            gap: 4px;
+
+            &:hover svg path {
+              stroke: #4e4e4e;
+            }
+
+            &:hover span {
+              color: #4e4e4e;
+            }
+
+            span {
+              color: #bcbcbc;
+              font-size: 13px;
+              font-weight: 400;
+              text-transform: uppercase;
+              height: 20px;
+            }
+          }
+        }
+
+        .burger-menu {
+          display: none;
+        }
+
+        .mobile-list {
+          display: none;
+        }
+      }
+    }
+
+    .social {
+      position: absolute;
+      top: 366px;
+      left: 54px;
+      display: flex;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      list-style: none;
+      gap: 50px;
+
+      li {
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #bcbcbc;
+          font-size: 12px;
+          font-weight: 400;
+
+          &:hover {
+            color: #4e4e4e;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 1200px) {
+    .container {
+      .social {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .container {
+      nav {
+        padding: 24px;
+
+        .left {
+          .list {
+            display: none;
+          }
+        }
+        .right {
+          gap: 20px;
+          .search {
+            display: none;
+          }
+
+          .line {
+            display: none;
+          }
+
+          .lang {
+            button {
+              align-items: center;
+            }
+          }
+
+          .burger-menu {
+            display: block;
+            width: 20px;
+            .burger-btn {
+              background: none;
+              border: none;
+              display: flex;
+              align-items: center;
+
+              &.active {
+                display: none;
+              }
+
+              svg {
+                width: 20px;
+                height: 14px;
+              }
+            }
+
+            .close-btn {
+              display: none;
+              background: none;
+              border: none;
+
+              &.active {
+                display: inline-block;
+                display: flex;
+                align-items: center;
+              }
+
+              svg {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+
+          .mobile-list {
+            display: block;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100vh;
+            padding: 102px 0 0 24px;
+            background: linear-gradient(172deg, #fff 6.13%, #dfedf6 154.2%);
+            display: flex;
+            position: absolute;
+            transition: 0.3s;
+            z-index: -1;
+
+            .list {
+              list-style: none;
+              display: flex;
+              flex-direction: column;
+              gap: 36px;
+
+              li {
+                a {
+                  color: #4e4e4e;
+                  font-size: 16px;
+                  font-weight: 500;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                }
+              }
+            }
+
+            &.active {
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.header-scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+section {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  // Slider Start
+  .mySwiper {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    .swiper-main {
+      display: flex;
+      align-items: center;
+
+      .swiper-left {
+        position: relative;
+        background-image: url("./assets/images/Rectangle5.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .left-info {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 60%;
+
+          .avin-logo {
+            margin-top: 261px;
+          }
+
+          p {
+            padding: 23px 0 36px 0;
+            color: #4e4e4e;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+          }
+
+          button {
+            width: 149px;
+            height: 40px;
+            border-radius: 2px;
+            background: #95d5e7;
+            position: relative;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 2px 10px 35px 0px rgba(27, 186, 230, 0.1);
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: -8px;
+              left: -8px;
+              width: 149px;
+              height: 40px;
+              border-radius: 2px;
+              border: 1px solid #19a7ce;
+              z-index: 1;
+            }
+          }
+
+          span {
+            position: absolute;
+            bottom: 41px;
+            left: 50px;
+            color: #e3f2c1;
+            font-size: 24px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .swiper-right {
+        width: 100%;
+        height: 100%;
+        background-image: url("./assets/images/Rectangle9.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .right-info {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 60%;
+
+          .avelec-logo {
+            margin-top: 246px;
+          }
+
+          p {
+            padding: 8px 0 36px 0;
+            color: #4e4e4e;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+          }
+
+          button {
+            width: 149px;
+            height: 40px;
+            border-radius: 2px;
+            background: #95d5e7;
+            position: relative;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 2px 10px 35px 0px rgba(27, 186, 230, 0.1);
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: -8px;
+              left: -8px;
+              width: 149px;
+              height: 40px;
+              border-radius: 2px;
+              border: 1px solid #19a7ce;
+              z-index: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-contact {
+      background: url("./assets/images/Rectanglecon.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .contact-details {
+        width: 785px;
+        height: 336px;
+        padding: 36px;
+        position: relative;
+        top: 344px;
+        left: 138px;
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          background: rgba(255, 255, 255, 0.3);
+          filter: blur(10px);
+          z-index: -1;
+        }
+
+        h4 {
+          color: #4e4e4e;
+          font-size: 20px;
+          font-weight: 400;
+          padding-bottom: 8px;
+        }
+
+        h2 {
+          color: #4e4e4e;
+          font-size: 24px;
+          font-weight: 500;
+          padding-bottom: 16px;
+        }
+
+        p {
+          color: #4e4e4e;
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 20px;
+          padding-bottom: 36px;
+        }
+
+        button {
+          width: 149px;
+          height: 40px;
+          border-radius: 2px;
+          background: #95d5e7;
+          position: relative;
+          margin-left: 8px;
+          color: #fff;
+          outline: none;
+          border: none;
+          font-size: 13px;
+          font-weight: 600;
+          box-shadow: 2px 10px 35px 0px rgba(27, 186, 230, 0.1);
+          display: flex;
+          justify-content: center;
+          cursor: pointer;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 149px;
+            height: 40px;
+            border-radius: 2px;
+            border: 1px solid #19a7ce;
+            z-index: 1;
+          }
+        }
+      }
+
+      span {
+        position: absolute;
+        bottom: 41px;
+        left: 50px;
+        color: #e3f2c1;
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+
+    .swiper-vacancy {
+      background: url("./assets/images/Rectanglevac.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .vacancy-details {
+        width: 785px;
+        height: 336px;
+        padding: 36px;
+        position: relative;
+        top: 344px;
+        left: 138px;
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          background: rgba(255, 255, 255, 0.3);
+          filter: blur(10px);
+          z-index: -1;
+        }
+
+        h4 {
+          color: #4e4e4e;
+          font-size: 20px;
+          font-weight: 400;
+          padding-bottom: 8px;
+        }
+
+        h2 {
+          color: #4e4e4e;
+          font-size: 24px;
+          font-weight: 500;
+          padding-bottom: 16px;
+        }
+
+        p {
+          color: #4e4e4e;
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 20px;
+          padding-bottom: 36px;
+        }
+
+        button {
+          width: 149px;
+          height: 40px;
+          border-radius: 2px;
+          margin-left: 8px;
+          background: #95d5e7;
+          position: relative;
+          color: #fff;
+          outline: none;
+          border: none;
+          font-size: 13px;
+          font-weight: 600;
+          box-shadow: 2px 10px 35px 0px rgba(27, 186, 230, 0.1);
+          display: flex;
+          justify-content: center;
+
+          cursor: pointer;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 149px;
+            height: 40px;
+            border-radius: 2px;
+            border: 1px solid #19a7ce;
+            z-index: 1;
+          }
+        }
+      }
+
+      span {
+        position: absolute;
+        bottom: 41px;
+        left: 50px;
+        color: #e3f2c1;
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      z-index: 999;
+      position: absolute;
+      right: 50px;
+
+      &:after {
+        font-size: 0;
+      }
+
+      svg:hover path {
+        stroke: #4e4e4e;
+      }
+    }
+
+    .swiper-button-next {
+      top: 95%;
+    }
+
+    .swiper-button-prev {
+      top: 91%;
+    }
+
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+      right: var(--swiper-navigation-sides-offset, 50px);
+      left: auto;
+    }
+
+    .swiper-pagination {
+      padding-right: 50px;
+
+      .swiper-pagination-bullet {
+        background: #e3f2c1;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+  // Slider End
+
+  //Main Page Mobile Start
+  .main-mobile {
+    display: none;
+  }
+  //Main Page Mobile End
+
+  //Responsive
+  @media (max-width: 1440px) {
+    .mySwiper {
+      .swiper-main {
+        .swiper-left {
+          .left-info {
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+      .swiper-contact {
+        background-position: top;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .mySwiper {
+      display: none;
+    }
+
+    .main-mobile {
+      display: block;
+
+      .first-page {
+        position: relative;
+        background-image: url("./assets/images/Rectangle5.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .page-info {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 60%;
+          height: 100%;
+
+          .avin-logo {
+            margin-top: 261px;
+          }
+
+          p {
+            padding: 23px 0 36px 0;
+            color: #4e4e4e;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+          }
+
+          button {
+            width: 149px;
+            height: 40px;
+            border-radius: 2px;
+            background: #95d5e7;
+            position: relative;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 2px 10px 35px 0px rgba(27, 186, 230, 0.1);
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: -8px;
+              left: -8px;
+              width: 149px;
+              height: 40px;
+              border-radius: 2px;
+              border: 1px solid #19a7ce;
+              z-index: 1;
+            }
+          }
+        }
+      }
+
+      .second-page {
+        width: 100%;
+        height: 100vh;
+        background-image: url("./assets/images/Rectangle9.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .page-info {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 60%;
+
+          .avelec-logo {
+            margin-top: 246px;
+          }
+
+          p {
+            padding: 8px 0 36px 0;
+            color: #4e4e4e;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+          }
+
+          button {
+            width: 149px;
+            height: 40px;
+            border-radius: 2px;
+            background: #95d5e7;
+            position: relative;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 2px 10px 35px 0px rgba(27, 186, 230, 0.1);
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: -8px;
+              left: -8px;
+              width: 149px;
+              height: 40px;
+              border-radius: 2px;
+              border: 1px solid #19a7ce;
+              z-index: 1;
+            }
+          }
+        }
+      }
+
+      .third-page {
+        background: url("./assets/images/Rectanglecon.png");
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+
+        .page-info {
+          width: 785px;
+          height: 336px;
+          padding: 36px;
+          position: relative;
+          top: 344px;
+          left: 138px;
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            filter: blur(10px);
+            z-index: -1;
+          }
+
+          h4 {
+            color: #4e4e4e;
+            font-size: 20px;
+            font-weight: 400;
+            padding-bottom: 8px;
+          }
+
+          h2 {
+            color: #4e4e4e;
+            font-size: 24px;
+            font-weight: 500;
+            padding-bottom: 16px;
+          }
+
+          p {
+            color: #4e4e4e;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 20px;
+            padding-bottom: 36px;
+          }
+
+          button {
+            width: 149px;
+            height: 40px;
+            border-radius: 2px;
+            background: #95d5e7;
+            position: relative;
+            margin-left: 8px;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 2px 10px 35px 0px rgba(27, 186, 230, 0.1);
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: -8px;
+              left: -8px;
+              width: 149px;
+              height: 40px;
+              border-radius: 2px;
+              border: 1px solid #19a7ce;
+              z-index: 1;
+            }
+          }
+        }
+      }
+
+      .fourth-page {
+        background: url("./assets/images/Rectanglevac.png");
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+
+        .page-info {
+          width: 785px;
+          height: 336px;
+          padding: 36px;
+          position: relative;
+          top: 344px;
+          left: 138px;
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            filter: blur(10px);
+            z-index: -1;
+          }
+
+          h4 {
+            color: #4e4e4e;
+            font-size: 20px;
+            font-weight: 400;
+            padding-bottom: 8px;
+          }
+
+          h2 {
+            color: #4e4e4e;
+            font-size: 24px;
+            font-weight: 500;
+            padding-bottom: 16px;
+          }
+
+          p {
+            color: #4e4e4e;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 20px;
+            padding-bottom: 36px;
+          }
+
+          button {
+            width: 149px;
+            height: 40px;
+            border-radius: 2px;
+            margin-left: 8px;
+            background: #95d5e7;
+            position: relative;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 2px 10px 35px 0px rgba(27, 186, 230, 0.1);
+            display: flex;
+            justify-content: center;
+
+            cursor: pointer;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: -8px;
+              left: -8px;
+              width: 149px;
+              height: 40px;
+              border-radius: 2px;
+              border: 1px solid #19a7ce;
+              z-index: 1;
+            }
+          }
+        }
+      }
+
+      .social-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        gap: 50px;
+        padding: 36px 0;
+
+        li {
+          a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #bcbcbc;
+            font-size: 12px;
+            font-weight: 400;
+
+            &:hover {
+              color: #4e4e4e;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .main-mobile {
+      .first-page,
+      .second-page {
+        .page-info {
+          width: 100%;
+          padding: 0 24px;
+          text-align: center;
+        }
+      }
+      .third-page,
+      .fourth-page {
+        .page-info {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+
+          .overlay {
+            background: rgba(255, 255, 255, 0.60);
+          }
+        }
+      }
+      
+    }
+  }
+
+  @media (max-width: 567px) {
+    .main-mobile {
+      .third-page,
+      .fourth-page {
+        .page-info {
+          h4 {
+            font-size: 17px;
+          }
+  
+          h2 {
+            font-size: 18px;
+          }
+  
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .main-mobile {
+      .first-page {
+        .page-info {
+          .avin-logo {
+            img {
+              width: 163px;
+              height: 36px;
+            }
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .second-page {
+        .page-info {
+          .avelec-logo {
+            img {
+              width: 169px;
+              height: 55px;
+            }
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .third-page,
+      .fourth-page {
+        .page-info {
+          h4 {
+            font-size: 15px;
+          }
+  
+          h2 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

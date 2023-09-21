@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vacancy.css">
+    <title>Vacancy</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="left">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../assets/images/avgrouplogo 1.png" alt="">
+                        </a>
+                    </div>
+                    <ul class="list">
+                        <li><a href="../about/about.html">Haqqımızda</a></li>
+                        <li><a href="../contact/contact.html">Əlaqə</a></li>
+                        <li><a href="./vacancy.html">Vakansiyalar</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <!-- Search -->
+                    <div class="search">
+                        <input type="text" id="input" placeholder="Nə axtarırsınız ?">
+
+                        <a href="#" id="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.58335 17.5C13.9556 17.5 17.5 13.9556 17.5 9.58335C17.5 5.2111 13.9556 1.66669 9.58335 1.66669C5.2111 1.66669 1.66669 5.2111 1.66669 9.58335C1.66669 13.9556 5.2111 17.5 9.58335 17.5Z"
+                                    stroke="#4E4E4E" stroke-width="1.3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M18.3334 18.3334L16.6667 16.6667" stroke="#4E4E4E" stroke-width="1.3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="#" id="close-btn" class="close-icon">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 17L1 1" stroke="#BCBCBC" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M1 17L17 1" stroke="#BCBCBC" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- Line -->
+                    <span class="line">
+                        <svg width="1" height="22" viewBox="0 0 1 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 1L0.499999 21" stroke="#BCBCBC" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <!-- Language -->
+                    <div class="lang">
+                        <button>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 18.3334C14.6024 18.3334 18.3334 14.6024 18.3334 10C18.3334 5.39765 14.6024 1.66669 10 1.66669C5.39765 1.66669 1.66669 5.39765 1.66669 10C1.66669 14.6024 5.39765 18.3334 10 18.3334Z"
+                                    stroke="#BCBCBC" stroke-width="1.3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6.66667 2.5H7.5C5.875 7.36667 5.875 12.6333 7.5 17.5H6.66667" stroke="#BCBCBC"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12.5 2.5C14.125 7.36667 14.125 12.6333 12.5 17.5" stroke="#BCBCBC"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2.5 13.3333V12.5C7.36667 14.125 12.6333 14.125 17.5 12.5V13.3333"
+                                    stroke="#BCBCBC" stroke-width="1.3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M2.5 7.5C7.36667 5.875 12.6333 5.875 17.5 7.5" stroke="#BCBCBC"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Az</span>
+                        </button>
+                    </div>
+                    <!-- Burger Menu -->
+                    <div class="burger-menu">
+                        <button class="burger-btn">
+                            <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="4.75" y1="7.25" x2="19.25" y2="7.25" stroke="#4E4E4E" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <line x1="0.75" y1="13.25" x2="19.25" y2="13.25" stroke="#4E4E4E" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <line x1="0.75" y1="1.25" x2="19.25" y2="1.25" stroke="#4E4E4E" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                        <button class="close-btn">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 17L1 1" stroke="#4E4E4E" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M1 17L17 1" stroke="#4E4E4E" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mobile-list">
+                        <ul class="list">
+                            <li><a href="../about/about.html">Haqqımızda</a></li>
+                            <li><a href="../contact/contact.html">Əlaqə</a></li>
+                            <li><a href="./vacancy.html">Vakansiyalar</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <section class="vacancy-one">
+        <h2>VAKANSİYALAR</h2>
+    </section>
+
+    <section class="vacancy-two">
+        <div class="container">
+            <div class="vacancy-box">
+                <div class="vacancy-info">
+                    <a href="#">Senior Graphic Designer</a>
+                    <span>AV Electronics (Bakü) |</span>
+                    <span>25 İyun 2023-28 İyun 2023</span>
+                    <p>Potter ipsum wand elf parchment wingardium. Forest marauder’s on headless hat dobby broken
+                        holyhead horseless. Ghost boggarts better granger norwegian. Robes tail vulture-hat for
+                        dementors answer...
+                    </p>
+                </div>
+                <hr color="#AFD3E2">
+                <div class="vacancy-info">
+                    <a href="#">İnsan resursları üzrə mütəxəssis</a>
+                    <span>AV Electronics (Bakü) |</span>
+                    <span>25 İyun 2023-28 İyun 2023</span>
+                    <p>Potter ipsum wand elf parchment wingardium. Forest marauder’s on headless hat dobby broken
+                        holyhead horseless. Ghost boggarts better granger norwegian. Robes tail vulture-hat for
+                        dementors answer...
+                    </p>
+                </div>
+                <hr color="#AFD3E2">
+                <div class="vacancy-info">
+                    <a href="#">Senior Graphic Designer</a>
+                    <span>AV Electronics (Bakü) |</span>
+                    <span>25 İyun 2023-28 İyun 2023</span>
+                    <p>Potter ipsum wand elf parchment wingardium. Forest marauder’s on headless hat dobby broken
+                        holyhead horseless. Ghost boggarts better granger norwegian. Robes tail vulture-hat for
+                        dementors answer...
+                    </p>
+                </div>
+                <hr color="#AFD3E2">
+                <div class="vacancy-info">
+                    <a href="#">İnsan resursları üzrə mütəxəssis</a>
+                    <span>AV Electronics (Bakü) |</span>
+                    <span>25 İyun 2023-28 İyun 2023</span>
+                    <p>Potter ipsum wand elf parchment wingardium. Forest marauder’s on headless hat dobby broken
+                        holyhead horseless. Ghost boggarts better granger norwegian. Robes tail vulture-hat for
+                        dementors answer...
+                    </p>
+                </div>
+                <hr color="#AFD3E2">
+                <div class="vacancy-info">
+                    <a href="#">Senior Graphic Designer</a>
+                    <span>AV Electronics (Bakü) |</span>
+                    <span>25 İyun 2023-28 İyun 2023</span>
+                    <p>Potter ipsum wand elf parchment wingardium. Forest marauder’s on headless hat dobby broken
+                        holyhead horseless. Ghost boggarts better granger norwegian. Robes tail vulture-hat for
+                        dementors answer...
+                    </p>
+                </div>
+                <hr color="#AFD3E2">
+                <div class="vacancy-info">
+                    <a href="#">İnsan resursları üzrə mütəxəssis</a>
+                    <span>AV Electronics (Bakü) |</span>
+                    <span>25 İyun 2023-28 İyun 2023</span>
+                    <p>Potter ipsum wand elf parchment wingardium. Forest marauder’s on headless hat dobby broken
+                        holyhead horseless. Ghost boggarts better granger norwegian. Robes tail vulture-hat for
+                        dementors answer...
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <footer>
+        <ul class="social">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Youtube</a></li>
+        </ul>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>
