@@ -133,14 +133,25 @@ header {
         .lang {
           padding-left: 24.5px;
 
+          &:hover {
+            .select-menu {
+              visibility: visible;
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+              padding: 12px 13px;
+            }
+          }
+
           button {
             border: none;
             background: transparent;
             cursor: pointer;
             display: flex;
             gap: 4px;
+            position: relative;
 
-            &:hover svg path {
+            &:hover .globe path {
               stroke: #4e4e4e;
             }
 
@@ -154,6 +165,54 @@ header {
               font-weight: 400;
               text-transform: uppercase;
               height: 20px;
+            }
+
+            .select-menu {
+              position: absolute;
+              top: 100%;
+              left: 0;
+              visibility: hidden;
+              border-radius: 10px;
+              background: #fff;
+              box-shadow: 0px 0px 8px -2px rgba(45, 73, 226, 0.2);
+              margin-top: 15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              span {
+                position: absolute;
+                top: -15px;
+                
+              }
+
+              ul {
+                list-style: none;
+                pointer-events: none;
+                transition: opacity 0.3s ease-in-out;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 12px;
+                
+
+                li {
+                  a {
+                    text-decoration: none;
+                    color: #bcbcbc;
+                    font-size: 13px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    
+
+                    &:hover {
+                      color: #4e4e4e !important;
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -304,7 +363,6 @@ header {
       }
     }
   }
-
 }
 
 .header-scrolled {
@@ -1055,11 +1113,10 @@ section {
           transform: translateY(-50%);
 
           .overlay {
-            background: rgba(255, 255, 255, 0.60);
+            background: rgba(255, 255, 255, 0.6);
           }
         }
       }
-      
     }
   }
 
@@ -1071,11 +1128,11 @@ section {
           h4 {
             font-size: 17px;
           }
-  
+
           h2 {
             font-size: 18px;
           }
-  
+
           p {
             font-size: 12px;
           }
@@ -1118,7 +1175,7 @@ section {
           h4 {
             font-size: 15px;
           }
-  
+
           h2 {
             font-size: 16px;
           }

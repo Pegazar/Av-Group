@@ -119,14 +119,22 @@ header .container nav .right .line {
 header .container nav .right .lang {
   padding-left: 24.5px;
 }
+header .container nav .right .lang:hover .select-menu {
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 13px;
+}
 header .container nav .right .lang button {
   border: none;
   background: transparent;
   cursor: pointer;
   display: flex;
   gap: 4px;
+  position: relative;
 }
-header .container nav .right .lang button:hover svg path {
+header .container nav .right .lang button:hover .globe path {
   stroke: #4e4e4e;
 }
 header .container nav .right .lang button:hover span {
@@ -138,6 +146,44 @@ header .container nav .right .lang button span {
   font-weight: 400;
   text-transform: uppercase;
   height: 20px;
+}
+header .container nav .right .lang button .select-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 8px -2px rgba(45, 73, 226, 0.2);
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .container nav .right .lang button .select-menu span {
+  position: absolute;
+  top: -15px;
+}
+header .container nav .right .lang button .select-menu ul {
+  list-style: none;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+header .container nav .right .lang button .select-menu ul li a {
+  text-decoration: none;
+  color: #bcbcbc;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+header .container nav .right .lang button .select-menu ul li a:hover {
+  color: #4e4e4e !important;
 }
 header .container nav .right .burger-menu {
   display: none;
